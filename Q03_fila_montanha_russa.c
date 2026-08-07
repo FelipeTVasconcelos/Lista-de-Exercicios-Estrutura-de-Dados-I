@@ -9,7 +9,7 @@
  *
  * Implementada com fila encadeada (sem limite fixo de tamanho).
  */
-
+ 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
