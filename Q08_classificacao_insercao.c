@@ -5,7 +5,7 @@
  * programa usa o Insertion Sort para ordenar esses horarios em ordem
  * cronologica crescente.
  */
-
+ 
 #include <stdio.h>
 
 #define N 10
