@@ -6,7 +6,7 @@
  * Funcoes principais:
  *  - inserir_item(): insere um novo item no inicio da lista
  *  - calcular_total(): percorre a lista e soma (quantidade * preco) de cada item
- */
+ */ 
 
 #include <stdio.h>
 #include <stdlib.h>
