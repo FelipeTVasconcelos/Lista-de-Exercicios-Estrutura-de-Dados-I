@@ -1,17 +1,13 @@
-/*
- * Questao 1 (E-commerce)
- * Lista encadeada para armazenar o carrinho de compras de um cliente.
- * Cada no contem: ID_produto (int), quantidade (int) e preco (float).
- *
- * Funcoes principais:
- *  - inserir_item(): insere um novo item no inicio da lista
- *  - calcular_total(): percorre a lista e soma (quantidade * preco) de cada item
- */ 
+
+  //Questao 1 (E-commerce)
+  //Lista encadeada para armazenar o carrinho de compras de um cliente
+  //Cada no contem: ID_produto (int), quantidade (int) e preco (float)
+ 
 
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Estrutura do no do carrinho */
+// Estrutura do no do carrinho 
 typedef struct Item {
     int id_produto;
     int quantidade;
@@ -19,8 +15,8 @@ typedef struct Item {
     struct Item *proximo;
 } Item;
 
-/* Insere um novo item no inicio da lista encadeada.
- * Recebe o ponteiro para o inicio da lista (por referencia) e os dados do item. */
+// Insere um novo item no inicio da lista encadeada.
+// Recebe o ponteiro para o inicio da lista (por referencia) e os dados do item. */
 void inserir_item(Item **inicio, int id_produto, int quantidade, float preco) {
     Item *novo = (Item *) malloc(sizeof(Item));
     if (novo == NULL) {
@@ -34,7 +30,7 @@ void inserir_item(Item **inicio, int id_produto, int quantidade, float preco) {
     *inicio = novo;
 }
 
-/* Calcula o valor total do carrinho somando quantidade * preco de cada item */
+/// Calcula o valor total do carrinho somando quantidade * preco de cada item
 float calcular_total(Item *inicio) {
     float total = 0.0f;
     Item *atual = inicio;
@@ -45,7 +41,7 @@ float calcular_total(Item *inicio) {
     return total;
 }
 
-/* Exibe todos os itens do carrinho */
+// Exibe todos os itens do carrinho 
 void exibir_carrinho(Item *inicio) {
     Item *atual = inicio;
     printf("---- Carrinho de Compras ----\n");
@@ -57,7 +53,7 @@ void exibir_carrinho(Item *inicio) {
     printf("------------------------------\n");
 }
 
-/* Libera toda a memoria alocada pela lista */
+// Libera toda a memoria alocada pela lista 
 void liberar_lista(Item *inicio) {
     Item *atual = inicio;
     while (atual != NULL) {
