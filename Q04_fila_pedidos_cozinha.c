@@ -1,14 +1,9 @@
-/*
- * Questao 4 (Comercio)
- * Fila de impressao de pedidos da cozinha de um restaurante.
- * Cada pedido possui: numero_pedido (int) e nome_prato (string).
- *
- * Funcao principal:
- *  - desenfileirar_pedido(): remove e exibe o proximo prato que a
- *    cozinha deve preparar (comportamento FIFO).
- *
- * Implementada com fila estatica (vetor circular).
- */
+ //Questao 4
+ //Fila de impressao de pedidos da cozinha de um restaurante.
+ //Cada pedido possui: numero_pedido (int) e nome_prato (string).
+ //Funcao principal é desenfileirar_pedido(): remove e exibe o proximo prato que a
+ //cozinha deve preparar (comportamento FIFO).
+ //Implementada com fila estatica (vetor circular).
 
 #include <stdio.h>
 #include <string.h>
@@ -16,13 +11,13 @@
 #define MAX_PEDIDOS 20
 #define TAM_NOME 50
 
-/* Estrutura de um pedido */
+// Estrutura de um pedido 
 typedef struct {
     int numero_pedido;
     char nome_prato[TAM_NOME];
 } Pedido;
 
-/* Estrutura da fila de pedidos (vetor circular) */
+// Estrutura da fila de pedidos (vetor circular) 
 typedef struct {
     Pedido pedidos[MAX_PEDIDOS];
     int inicio;
@@ -30,14 +25,14 @@ typedef struct {
     int total;
 } FilaPedidos;
 
-/* Inicializa a fila de pedidos */
+// Inicializa a fila de pedidos 
 void inicializar_fila(FilaPedidos *fila) {
     fila->inicio = 0;
     fila->fim = -1;
     fila->total = 0;
 }
 
-/* Insere um novo pedido no fim da fila */
+// Insere um novo pedido no fim da fila 
 void enfileirar_pedido(FilaPedidos *fila, int numero_pedido, const char *nome_prato) {
     if (fila->total >= MAX_PEDIDOS) {
         printf("Fila de pedidos cheia!\n");
@@ -50,7 +45,7 @@ void enfileirar_pedido(FilaPedidos *fila, int numero_pedido, const char *nome_pr
     printf("Pedido #%d (%s) enviado para a cozinha.\n", numero_pedido, nome_prato);
 }
 
-/* Remove (desenfileira) e exibe o proximo prato que a cozinha deve preparar */
+// Remove (desenfileira) e exibe o proximo prato que a cozinha deve preparar 
 int desenfileirar_pedido(FilaPedidos *fila) {
     if (fila->total == 0) {
         printf("Nenhum pedido pendente na cozinha.\n");
@@ -76,7 +71,7 @@ int main(void) {
     desenfileirar_pedido(&fila);
     desenfileirar_pedido(&fila);
     desenfileirar_pedido(&fila);
-    desenfileirar_pedido(&fila); /* fila vazia */
+    desenfileirar_pedido(&fila); // fila vazia 
 
     return 0;
 }
