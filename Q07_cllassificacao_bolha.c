@@ -1,35 +1,33 @@
-/*
- * Questao 7 (Turismo)
- * Uma agencia de viagens tem um vetor com os precos de 8 pacotes
- * turisticos desordenados. Este programa implementa o algoritmo
- * Bubble Sort para ordenar esses precos do mais barato para o mais caro.
- */
+//Questao 7 (Turismo)
+// Uma agencia de viagens tem um vetor com os precos de 8 pacotes
+//turisticos desordenados. Este programa implementa o algoritmo
+//Bubble Sort para ordenar esses precos do mais barato para o mais caro.
 
 #include <stdio.h>
 
 #define N 8
 
-/* Ordena o vetor de precos em ordem crescente usando Bubble Sort */
+// Ordena o vetor de precos em ordem crescente usando Bubble Sort 
 void bubble_sort(float precos[], int n) {
     for (int i = 0; i < n - 1; i++) {
         int houve_troca = 0;
         for (int j = 0; j < n - 1 - i; j++) {
             if (precos[j] > precos[j + 1]) {
-                /* troca os elementos de posicao */
+                // troca os elementos de posicao 
                 float temp = precos[j];
                 precos[j] = precos[j + 1];
                 precos[j + 1] = temp;
                 houve_troca = 1;
             }
         }
-        /* otimizacao: se nao houve troca, o vetor ja esta ordenado */
+        // otimizacao: se nao houve troca, o vetor ja esta ordenado 
         if (!houve_troca) {
             break;
         }
     }
 }
 
-/* Exibe o vetor de precos formatado */
+// Exibe o vetor de precos formatado 
 void exibir_precos(float precos[], int n) {
     for (int i = 0; i < n; i++) {
         printf("R$ %.2f ", precos[i]);
