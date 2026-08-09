@@ -1,12 +1,10 @@
-/*
- * Questao 2 (Logistica)
- * Lista sequencial (vetor) de paradas de uma rota de entrega.
- * Cada parada possui: nome do bairro (string) e prazo_minutos (int).
- *
- * Funcao principal:
- *  - remover_parada(): remove uma parada da rota (por indice) quando a
- *    entrega e concluida, deslocando os elementos seguintes.
- */
+
+//Questao 2
+//Lista sequencial de paradas de uma rota de entrega.
+//Cada parada possui: nome do bairro (string) e prazo_minutos (int).
+//Funcao principal é remover_parada(): remove uma parada da rota (por indice) quando a
+//entrega e concluida, deslocando os elementos seguintes.
+ 
 
 #include <stdio.h>
 #include <string.h>
@@ -14,13 +12,13 @@
 #define MAX_PARADAS 50
 #define TAM_NOME 50
 
-/* Estrutura de uma parada da rota */
+//Estrutura de uma parada da rota 
 typedef struct {
     char bairro[TAM_NOME];
     int prazo_minutos;
 } Parada;
 
-/* Insere uma nova parada no final da lista sequencial */
+//Insere uma nova parada no final da lista sequencial 
 void inserir_parada(Parada rota[], int *quantidade, const char *bairro, int prazo_minutos) {
     if (*quantidade >= MAX_PARADAS) {
         printf("Rota cheia! Nao e possivel adicionar mais paradas.\n");
@@ -31,8 +29,8 @@ void inserir_parada(Parada rota[], int *quantidade, const char *bairro, int praz
     (*quantidade)++;
 }
 
-/* Remove uma parada da rota pelo indice, quando a entrega e concluida.
- * Desloca os elementos seguintes uma posicao para a esquerda. */
+//Remove uma parada da rota pelo indice, quando a entrega e concluida.
+//Desloca os elementos seguintes uma posicao para a esquerda. 
 int remover_parada(Parada rota[], int *quantidade, int indice) {
     if (indice < 0 || indice >= *quantidade) {
         printf("Indice invalido!\n");
@@ -45,7 +43,7 @@ int remover_parada(Parada rota[], int *quantidade, int indice) {
     return 1;
 }
 
-/* Exibe a rota atual */
+// Exibe a rota atual 
 void exibir_rota(Parada rota[], int quantidade) {
     printf("---- Rota Atual ----\n");
     for (int i = 0; i < quantidade; i++) {
@@ -65,7 +63,7 @@ int main(void) {
 
     exibir_rota(rota, quantidade);
 
-    /* Entrega do bairro "Jurunas" (indice 1) foi concluida */
+    // Entrega do bairro "Jurunas" (indice 1) foi concluida 
     printf("\nEntrega concluida em: %s\n", rota[1].bairro);
     remover_parada(rota, &quantidade, 1);
 
