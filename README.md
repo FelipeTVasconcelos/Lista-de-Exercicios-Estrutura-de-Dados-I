@@ -29,17 +29,3 @@ Q08. Insertion Sort — 10 horários de fornecedores
 Q09. Busca linear — 15 códigos de barras
 
 Q10. Busca binária — 1000 IDs de clientes ordenados
-
--
-
-**Estrutura do Repositório**
-
-```text
-.
-├── Lista_01_Ponteiros_e_Alocacao/   # Exercícios de ponteiros e alocação dinâmica
-├── Lista_02_TADs/                    # Tipos Abstratos de Dados
-├── Lista_03_Listas_Encadeadas/       # Listas simples, duplas e circulares
-├── Lista_04_Pilhas_e_Filas/          # Aplicações e implementações de Pilhas e Filas
-├── Lista_05_Arvores/                 # Árvores binárias de busca
-├── include/                          # Arquivos de cabeçalho (.h)
-└── README.md                         # Documentação do repositório
