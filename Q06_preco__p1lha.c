@@ -1,5 +1,6 @@
 //Sistema que registra o histórico de preços antigos de um produto utilizando
-//a estrutura de dados Pilha Encadeada (LIFO - Last In,First Out). A cada alteração realizada, o preço anterior é salvo no topo da pilha, permitindo que
+//a estrutura de dados Pilha Encadeada (LIFO - Last In,First Out). A cada alteração realizada, 
+//o preço anterior é salvo no topo da pilha, permitindo que
 //a operação de "Desfazer" restaure sucessivamente o último preço modificado.
 
 #include <stdio.h>
