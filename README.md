@@ -3,6 +3,7 @@
 ​Repositório dedicado à resolução da Lista Final da disciplina de Estruturas de Dados I. O projeto reúne as 10 questões propostas, desenvolvidas em linguagem C, focando no gerenciamento de memória, estruturas lineares e algoritmos de busca e ordenação.
 
 ​🎯 **Objetivos**
+
 ​Aplicar conceitos de ponteiros, alocação dinâmica e tipos abstratos de dados. ​Implementar e manipular listas, filas e pilhas (alocação sequencial e encadeada). Desenvolver e analisar algoritmos clássicos de ordenação e busca em C.
 
 ​👥 **Desenvolvimento e Divisão do Trabalho**
